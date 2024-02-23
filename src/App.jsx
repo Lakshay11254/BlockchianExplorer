@@ -8,19 +8,21 @@ function App() {
   return (
     <>
       <Navbar />
-<Switch>
+      {/* <BlockDetails/> */}
+      <Switch>
 
-  <Route path="/transactions" component={Transactions}/>
+        <Route path="/transactions" component={Transactions} />
         {/* <Transfer/> */}
-  <Route path="/transfer" component={Transfer}/>
-      {/* <BlockDetails /> */}
-  <Route path="/blocks" component={BlockDetails}/>
-</Switch>
+        <Route path="/transfer" component={Transfer} />
+        {/* <BlockDetails /> */}
+        <Route path="/blocks" component={BlockDetails} />
+        <Route path="/" component={BlockDetails} />
+      </Switch>
     </>
   );
- }
+}
 
- export default App;
+export default App;
 
 //  <NavBar />
 //  <Switch>
@@ -28,7 +30,6 @@ function App() {
 //    <Route path="/contact" component={Contact} />
 //    <Route path="/" component={Home} />
 //  </Switch>
-
 
 // App.jsx
 // import React from "react";

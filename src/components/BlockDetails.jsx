@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { FaInfoCircle } from "react-icons/fa";
 import { GiOnTarget } from "react-icons/gi";
 
+
 const BlockDetails = ({ address, balance, gasUsed }) => {
   return (
     <div className="container mx-auto my-5 p-7 bg-gray-600 text-white rounded-lg shadow-xl">

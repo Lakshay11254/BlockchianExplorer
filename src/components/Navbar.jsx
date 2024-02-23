@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import React, { useState } from "react";
-import { SiEthereum } from "react-icons/si";
 import { FaUserCircle } from "react-icons/fa";
+import { SiBlockchaindotcom } from "react-icons/si";
 
 function Navbar() {
   const [isNavbarOpen, setNavbarOpen] = useState(false);
@@ -17,7 +17,7 @@ function Navbar() {
           href="/blocks"
           className="flex items-center space-x-3 rtl:space-x-reverse"
         >
-          <SiEthereum className="h-8 bg-white" />
+          <SiBlockchaindotcom className="h-8 w-7  text-white" />
           <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">
             Blocks
           </span>
@@ -26,7 +26,8 @@ function Navbar() {
           <div
             type="button"
             className="text-white flex  bg-gray-700 hover:bg-gray-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 text-center dark:bg-gray-600 dark:hover:bg-gray-700 dark:focus:ring-gray-800"
-          ><FaUserCircle  className="mr-2 mt-1 items-center justify-between"/>
+          >
+            <FaUserCircle className="mr-2 mt-1 items-center justify-between" />
             Lakshay Malhotra
           </div>
           <button
