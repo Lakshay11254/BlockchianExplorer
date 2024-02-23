@@ -4,32 +4,32 @@ import { GiOnTarget } from "react-icons/gi";
 
 const BlockDetails = ({ address, balance, gasUsed }) => {
   return (
-    <div className="container mx-auto my-5 p-7 bg-purple-600 text-white rounded-lg shadow-xl">
+    <div className="container mx-auto my-5 p-7 bg-gray-600 text-white rounded-lg shadow-xl">
       <h1 className="flex items-center gap-2 font-semibold text-2xl mb-4 ">
         <FaInfoCircle />
         Block Details
       </h1>
       {address ? (
-        <table className="w-full border-collapse border border-purple-900">
+        <table className="w-full border-collapse border border-gray-900">
           <thead>
-            <tr className="bg-purple-800 text-white font-bold">
-              <th className="border border-purple-900 py-2 px-4">Address</th>
-              <th className="border border-purple-900 py-2 px-4">Balance</th>
-              <th className="border border-purple-900 py-2 px-4">Gas Used</th>
+            <tr className="bg-gray-800 text-white font-bold">
+              <th className="border border-gray-900 py-2 px-4">Address</th>
+              <th className="border border-gray-900 py-2 px-4">Balance</th>
+              <th className="border border-gray-900 py-2 px-4">Gas Used</th>
             </tr>
           </thead>
           <tbody>
             <tr className="text-center font-semibold">
-              <td className="border border-purple-900 py-2 px-4">{address}</td>
-              <td className="border border-purple-900 py-2 px-4">{balance}</td>
-              <td className="border border-purple-900 py-2 px-4">{gasUsed}</td>
+              <td className="border border-gray-900 py-2 px-4">{address}</td>
+              <td className="border border-gray-900 py-2 px-4">{balance}</td>
+              <td className="border border-gray-900 py-2 px-4">{gasUsed}</td>
             </tr>
           </tbody>
         </table>
       ) : (
         <p className="font-semibold text-black-600">
           Ethereum Address required.
-        </p>
+        </p>  
       )}
     </div>
   );
@@ -85,7 +85,7 @@ const Blocks = () => {
   );
 
   return (
-    <div className="bg-purple-600 min-h-screen text-white">
+    <div className="bg-gray-600 min-h-screen text-white">
       <div className="container mx-auto p-8">
         <div className="mb-6">
           <label
@@ -101,7 +101,7 @@ const Blocks = () => {
             name="ethereumAddress"
             onChange={handleOnChange}
             value={selectedAddress || ""}
-            className="w-full p-3 border rounded-md focus:outline-none focus:border-purple-700 bg-white text-black"
+            className="w-full p-3 border rounded-md focus:outline-none focus:border-gray-700 mt-10 bg-white text-black"
           >
             <option value="" disabled>
               Select an address
