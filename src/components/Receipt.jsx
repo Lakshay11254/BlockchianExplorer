@@ -13,7 +13,13 @@ const Receipt = ({
   return (
     <div className="receipt">
       <h2>Receipt Details</h2>
-      {transactionHash && blockHash && blockNumber && from && to && amount && gasUsed ? (
+      {transactionHash &&
+      blockHash &&
+      blockNumber &&
+      from &&
+      to &&
+      amount &&
+      gasUsed ? (
         <table>
           <tbody>
             <tr>
