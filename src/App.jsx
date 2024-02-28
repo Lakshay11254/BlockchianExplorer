@@ -11,9 +11,7 @@ function App() {
       <Switch>
 
         <Route path="/transactions" component={Transactions} />
-        {/* <Transfer/> */}
         <Route path="/transfer" component={Transfer} />
-        {/* <BlockDetails /> */}
         <Route path="/blocks" component={BlockDetails} />
         <Route path="/" component={BlockDetails} />
       </Switch>

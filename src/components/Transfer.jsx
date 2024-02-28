@@ -9,6 +9,9 @@ const Transfer = () => {
     "0xafa57bd80dfef746aaa7bea1e9e024e89ab1056e",
     "0xffaa6990069ecba8570dab82cba2caf6ff77b8fa",
     "0xc7c7b0001efd1cf4fa1369a36f1bcf98fbf8c9ba",
+    "0xa2f5b4441efd1cf4fa132a36g1bcf28fbg8c9ab",
+    "0x69a36f1bcf9c7c7b0001efd1cf4fa138fbf8c9ba",
+
   ];
 
   const [amount, setAmount] = useState("");
@@ -49,9 +52,8 @@ const Transfer = () => {
         Transfers
       </h1>
       <div className="container mx-auto p-8">
-        {/* <Navbar title="Transfers" /> */}
+{/* form */}
         <form onSubmit={handleSubmit} className="mb-4">
-          {/* Form inputs and address selection */}
           <label htmlFor="toAddress">To Address:</label>
           <select
             id="toAddress"

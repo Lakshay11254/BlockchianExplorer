@@ -4,7 +4,7 @@ import { FaUserCircle } from "react-icons/fa";
 import { SiBlockchaindotcom } from "react-icons/si";
 
 function Header() {
-  //creating navbar component
+  //navbar 
   const [isNavbarOpen, setNavbarOpen] = useState(false);
 
   const toggleNavbar = () => {
