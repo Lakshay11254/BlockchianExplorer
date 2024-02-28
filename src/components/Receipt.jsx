@@ -1,5 +1,7 @@
 // Receipt.jsx
 import React from "react";
+import { FaInfoCircle } from "react-icons/fa";
+import { FaReceipt } from "react-icons/fa";
 
 const Receipt = ({
   transactionHash,
@@ -11,8 +13,8 @@ const Receipt = ({
   gasUsed,
 }) => {
   return (
-    <div className="receipt">
-      <h2>Receipt Details</h2>
+    <div className="p-4 mb-4 text-sm text-white-800 rouned-lg bg-red-50 dark:bg-gray-800 dark:text-white-400" role="alert">
+      <h2 className="flex items-center gap-1"><FaReceipt />Receipt Details</h2>
       {transactionHash &&
       blockHash &&
       blockNumber &&
@@ -53,7 +55,8 @@ const Receipt = ({
           </tbody>
         </table>
       ) : (
-        <p className="warning-message">Required transfer fields are missing.</p>
+        <p className="flex items-center  p-4 mb-4 gap-2 text-sm text-red-800 rouned-lg bg-red-50 dark:bg-gray-800 dark:text-red-400" role="alert">
+        <FaInfoCircle />Required transfer fields are missing.</p>
       )}
     </div>
   );

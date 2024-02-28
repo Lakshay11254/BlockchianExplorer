@@ -1,7 +1,8 @@
 // Transfer.jsx
 import React, { useState } from "react";
-import Navbar from "./Navbar";
+// import Header from "./Header";
 import Receipt from "./Receipt";
+import { TbTransfer } from "react-icons/tb";
 
 const Transfer = () => {
   const ethereumAddresses = [
@@ -42,7 +43,11 @@ const Transfer = () => {
   };
 
   return (
-    <div className="bg-gray-600 min-h-screen text-white container mx-auto my-5  p-10">
+    <div className="bg-gray-600 min-h-screen text-white  mx-auto my-5  p-10">
+      <h1 className="flex items-center gap-2 font-semibold text-2xl mb-1 mt-8">
+        <TbTransfer />
+        Transfers
+      </h1>
       <div className="container mx-auto p-8">
         {/* <Navbar title="Transfers" /> */}
         <form onSubmit={handleSubmit} className="mb-4">
@@ -93,12 +98,18 @@ const Transfer = () => {
             className="w-full p-3 border rounded-md focus:outline-none focus:border-gray-700 bg-white text-black"
           />
 
-
           {/* Submit and cancel buttons */}
-          <button type="submit" className="mr-2 container bg-gray-900 hover:bg-gray-700 mt-2 mb-2 p-2">
+          <button
+            type="submit"
+            className="mr-2 container bg-gray-900 hover:bg-gray-700 mt-2 mb-2 p-2"
+          >
             SUBMIT
           </button>
-          <button type="button" className="container bg-gray-900 hover:bg-gray-700 p-2 " onClick={handleCancel} >
+          <button
+            type="button"
+            className="container bg-gray-900 hover:bg-gray-700 p-2 "
+            onClick={handleCancel}
+          >
             CANCEL
           </button>
         </form>

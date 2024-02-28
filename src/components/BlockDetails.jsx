@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { FaInfoCircle } from "react-icons/fa";
 import { GiOnTarget } from "react-icons/gi";
-
+import { SiOpenlayers } from "react-icons/si";
 
 const BlockDetails = ({ address, balance, gasUsed }) => {
   return (
@@ -30,7 +30,7 @@ const BlockDetails = ({ address, balance, gasUsed }) => {
       ) : (
         <p className="font-semibold text-black-600">
           Ethereum Address required.
-        </p>  
+        </p>
       )}
     </div>
   );
@@ -87,6 +87,7 @@ const Blocks = () => {
 
   return (
     <div className="bg-gray-600 min-h-screen text-white">
+      <h1></h1>
       <div className="container mx-auto p-8">
         <div className="mb-6">
           <label
@@ -97,6 +98,10 @@ const Blocks = () => {
             Select Ethereum Address
             <GiOnTarget />
           </label>
+          <h1 className="flex items-center gap-2 font-semibold text-2xl mt-8 ">
+            <SiOpenlayers />
+            Blocks
+          </h1>
           <select
             id="ethereumAddress"
             name="ethereumAddress"
@@ -107,8 +112,7 @@ const Blocks = () => {
             <option value="" disabled>
               Select an address
             </option>
-            {
-            ethereumAddresses.map((address) => (
+            {ethereumAddresses.map((address) => (
               <option key={address} value={address}>
                 {address}
               </option>
